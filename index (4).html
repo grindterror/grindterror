@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>grind. terror · remeras y posters</title>
+<meta name="description" content="Remeras y posters de cine de terror, diseñados y estampados con serigrafía. Envíos a todo el país.">
+<meta property="og:title" content="grind. terror">
+<meta property="og:description" content="Remeras y posters de cine de terror estampados con serigrafía.">
+<meta property="og:image" content="images/logo.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000'/%3E%3Crect x='8' y='8' width='84' height='84' fill='none' stroke='%23fff' stroke-width='6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --negro: #000;
+    --blanco: #fff;
+    --gris: #b9b9b9;
+    --linea: #fff;
+    --titulo: "Alfa Slab One", "Rockwell", "Cooper Black", Georgia, serif;
+    --texto: "Libre Baskerville", Baskerville, Georgia, "Times New Roman", serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { background: var(--negro); }
+  body {
+    margin: 0;
+    background: var(--negro);
+    color: var(--blanco);
+    font-family: var(--texto);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: var(--blanco); }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--blanco);
+    outline-offset: 4px;
+  }
+
+  .contenedor { width: min(1120px, 100% - 2.5rem); margin-inline: auto; }
+
+  /* Logo */
+  .logo { padding-top: clamp(1.25rem, 4vw, 3rem); }
+  .logo img { width: 100%; border-radius: 0; }
+
+  /* Intro */
+  .intro { padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(2.5rem, 6vw, 4.5rem); }
+  .intro p {
+    margin: 0;
+    max-width: 38rem;
+    font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+    line-height: 1.6;
+  }
+  .intro p + p { margin-top: 0.75rem; font-style: italic; color: var(--gris); }
+
+  /* Productos */
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(2rem, 5vw, 3.5rem) clamp(1.25rem, 3vw, 2.5rem);
+    padding-bottom: clamp(3rem, 7vw, 5rem);
+  }
+  .producto { display: flex; flex-direction: column; }
+  .foto {
+    position: relative;
+    border: 2px solid var(--linea);
+    background: #111;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+  }
+  .foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .foto img.espalda { opacity: 0; transition: opacity 0.25s ease; }
+  .foto.ver-espalda img.espalda { opacity: 1; }
+
+  .vista {
+    display: flex; gap: 0.5rem; margin-top: 0.75rem;
+  }
+  .vista button {
+    font: inherit; font-size: 0.9rem;
+    color: var(--blanco); background: var(--negro);
+    border: 1px solid var(--blanco);
+    padding: 0.35rem 0.9rem; cursor: pointer; border-radius: 0;
+  }
+  .vista button[aria-pressed="true"] { background: var(--blanco); color: var(--negro); }
+
+  .producto h2 {
+    font-family: var(--titulo);
+    font-weight: 400;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.15;
+    margin: 1.1rem 0 0.15rem;
+  }
+  .anio { font-style: italic; color: var(--gris); margin: 0; }
+  .precio {
+    font-family: var(--titulo);
+    font-size: 1.35rem;
+    margin: 0.6rem 0 0.5rem;
+  }
+  .producto p.detalle { margin: 0 0 0.5rem; max-width: 34rem; }
+  .producto dl { margin: 0.25rem 0 0; }
+  .producto dl div { display: flex; gap: 0.5rem; padding: 0.4rem 0; border-top: 1px solid #444; }
+  .producto dl div:last-child { border-bottom: 1px solid #444; }
+  .producto dt { font-weight: 700; min-width: 7.5rem; }
+  .producto dd { margin: 0; }
+
+  /* Pie */
+  footer {
+    border-top: 2px solid var(--linea);
+    padding: clamp(2rem, 5vw, 3rem) 0 clamp(2.5rem, 6vw, 4rem);
+  }
+  footer p { margin: 0; max-width: 38rem; font-size: 1.15rem; }
+  footer p + p { margin-top: 0.5rem; }
+  footer a { text-underline-offset: 4px; text-decoration-thickness: 2px; font-weight: 700; }
+
+  @media (max-width: 720px) {
+    .productos { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .foto img.espalda { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="contenedor logo">
+  <img src="images/logo.png" alt="grind. terror" width="1285" height="628">
+</header>
+
+<main class="contenedor">
+  <section class="intro">
+    <p>¡Hola! Estas son las remeras y posters disponibles, diseñados y estampados por mí como un homenaje al cine que tanto nos gusta.</p>
+    <p>¡Gracias por ver!</p>
+  </section>
+
+  <section class="productos" aria-label="Productos disponibles">
+
+    <!-- Night of the Living Dead -->
+    <article class="producto">
+      <div class="foto" id="foto-night">
+        <img src="images/night-frente.jpg" alt="Remera negra con estampado blanco de Night of the Living Dead: un auto en un camino de bosque, vista de frente" width="1080" height="1440">
+        <img class="espalda" src="images/night-espalda.jpg" alt="Espalda de la remera: tres recuadros con imágenes de la película y el texto Directed by George A. Romero, 1968" width="1080" height="1440" loading="lazy">
+      </div>
+      <div class="vista" role="group" aria-label="Vista de la remera Night of the Living Dead">
+        <button type="button" data-target="foto-night" data-vista="frente" aria-pressed="true">Frente</button>
+        <button type="button" data-target="foto-night" data-vista="espalda" aria-pressed="false">Espalda</button>
+      </div>
+      <h2>Night of the Living Dead</h2>
+      <p class="anio">1968</p>
+      <p class="precio">$28.000</p>
+      <p class="detalle">Remera estampada con serigrafía (tinta blanca).</p>
+      <dl>
+        <div><dt>Estampado</dt><dd>46 x 31 cm</dd></div>
+        <div><dt>Talles</dt><dd>S al XXL</dd></div>
+      </dl>
+    </article>
+
+    <!-- The Blair Witch Project -->
+    <article class="producto">
+      <div class="foto">
+        <img src="images/blair.jpg" alt="Remera negra con estampado blanco de The Blair Witch Project y la leyenda Real Found Footage" width="1080" height="1440" loading="lazy">
+      </div>
+      <h2>The Blair Witch Project</h2>
+      <p class="anio">1999</p>
+      <p class="precio">$28.000</p>
+      <p class="detalle">Remera estampada con serigrafía (tinta blanca).</p>
+      <dl>
+        <div><dt>Talles</dt><dd>S al XXL</dd></div>
+      </dl>
+    </article>
+
+    <!-- House of Whipcord -->
+    <article class="producto">
+      <div class="foto">
+        <img src="images/whipcord.jpg" alt="Póster House of Whipcord en rojo y crema sobre papel negro" width="1080" height="1440" loading="lazy">
+      </div>
+      <h2>House of Whipcord</h2>
+      <p class="anio">Póster · 1974</p>
+      <p class="precio">$30.000</p>
+      <p class="detalle">Estampado con serigrafía a dos tintas sobre papel negro de 300 gr. Se envía en un tubo de cartón para protegerlo.</p>
+      <dl>
+        <div><dt>Medida</dt><dd>31 x 42 cm</dd></div>
+      </dl>
+    </article>
+
+    <!-- Macabre -->
+    <article class="producto">
+      <div class="foto">
+        <img src="images/macabre.jpg" alt="Póster Macabre, Lamberto Bava 1980, en crema sobre papel negro" width="1080" height="1440" loading="lazy">
+      </div>
+      <h2>Macabre</h2>
+      <p class="anio">Póster · 1980</p>
+      <p class="precio">$30.000</p>
+      <p class="detalle">Estampado con serigrafía a una tinta sobre papel negro de 300 gr. Se envía en un tubo de cartón para protegerlo.</p>
+      <dl>
+        <div><dt>Medida</dt><dd>31 x 42 cm</dd></div>
+      </dl>
+    </article>
+
+  </section>
+</main>
+
+<footer>
+  <div class="contenedor">
+    <p>Hago envíos a todo el país.</p>
+    <p>Para más info hablame por Instagram.</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.vista button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var foto = document.getElementById(btn.dataset.target);
+      var espalda = btn.dataset.vista === 'espalda';
+      foto.classList.toggle('ver-espalda', espalda);
+      btn.parentElement.querySelectorAll('button').forEach(function (b) {
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
+    });
+  });
+</script>
+</body>
+</html>
